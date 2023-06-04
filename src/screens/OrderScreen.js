@@ -83,13 +83,10 @@ const OrderScreen = ({ match }) => {
                     </h5>
                     <p>{order.user.name}</p>
                     <p>
-                      <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
+                      <a href={`mailto:${order.user.email}`}>
+                        {order.user.email}
+                      </a>
                     </p>
-                    {order.user.phone && (
-                      <div>
-                        <strong>Phone:</strong> {order.user.phone}
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
@@ -213,15 +210,6 @@ const OrderScreen = ({ match }) => {
                   <hr />
                   <div className="row">
                     <div className="col-md-6">
-                      <h6><b>Tax</b></h6>
-                    </div>
-                    <div className="col-md-6">
-                      <h6>Php {order.taxPrice.toFixed(2)}</h6>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="row">
-                    <div className="col-md-6">
                       <h6><b>Total</b></h6>
                     </div>
                     <div className="col-md-6">
@@ -284,15 +272,6 @@ const OrderScreen = ({ match }) => {
                       </div>
                       <div className="col-md-6">
                         <h6>Php {order.shippingPrice.toFixed(2)}</h6>
-                      </div>
-                    </div>
-                    <hr />
-                    <div className="row">
-                      <div className="col-md-6">
-                        <h6><b>Tax</b></h6>
-                      </div>
-                      <div className="col-md-6">
-                        <h6>Php {order.taxPrice.toFixed(2)}</h6>
                       </div>
                     </div>
                     <hr />
