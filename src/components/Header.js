@@ -41,7 +41,7 @@ const Header = () => {
               </Link>
             </div>
             <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
-              <Link to="">
+              <Link to="https://web.facebook.com/profile.php?id=100090016423080">
                 <i className="fab fa-facebook-f"></i>
               </Link>
             </div>
