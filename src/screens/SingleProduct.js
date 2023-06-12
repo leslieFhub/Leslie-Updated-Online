@@ -16,7 +16,6 @@ const SingleProduct = ({ history, match }) => {
   const [qty, setQty] = useState(1);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
-  const [stocksRemaining, setStocksRemaining] = useState(0); 
 
   const productId = match.params.id;
   const dispatch = useDispatch();
@@ -99,9 +98,9 @@ const SingleProduct = ({ history, match }) => {
                     <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Status</h6>
                       {product.countInStock > 0 ? (
-                        <span>In Stock</span>
+                        <span className="text-success">In Stock</span>
                       ) : (
-                        <span>unavailable</span>
+                        <span className="text-danger">Unavailable</span>
                       )}
                     </div>
                     <div className="flex-box d-flex justify-content-between align-items-center">
